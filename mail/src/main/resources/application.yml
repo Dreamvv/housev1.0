@@ -1,0 +1,14 @@
+spring:
+  mail:
+    host: smtp.163.com
+    username: 15927002590@163.com
+    password: 770070Ly
+
+  rabbitmq:
+    port: 5672
+    host: localhost
+    username: guest
+    password: guest
+
+server:
+  port: 8888
