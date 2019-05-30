@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!-- 配置关闭缓存  -->
+        <setting name="cacheEnabled" value="false"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="useGeneratedKeys" value="true"/>
+        <setting name="defaultExecutorType" value="REUSE"/>
+        <!-- 事务超时时间 -->
+        <setting name="defaultStatementTimeout" value="600"/>
+    </settings>
+
+
+    <typeAliases>
+        <typeAlias type="com.dream.house.model.User" alias="user" />
+        <typeAlias type="com.dream.house.model.Agency"      alias="agency"/>
+        <typeAlias type="com.dream.house.model.House" alias="house" />
+        <typeAlias type="com.dream.house.model.City" alias="city" />
+        <typeAlias type="com.dream.house.model.Comment"     alias="comment"/>
+        <typeAlias type="com.dream.house.model.Community" alias="community" />
+        <typeAlias type="com.dream.house.model.HouseUser" alias="houseUser" />
+        <typeAlias type="com.dream.house.model.Blog"        alias="blog"/>
+        <typeAlias type="com.dream.house.model.User"        alias="user"/>
+        <typeAlias type="com.dream.house.model.UserMsg"     alias="userMsg"/>
+        <typeAlias type="com.dream.house.model.HouseUser"     alias="houseUser"/>
+
+    </typeAliases>
+
+    <mappers>
+        <mapper resource="mapper/user.xml" />
+        <mapper resource="mapper/blog.xml"/>
+        <mapper resource="mapper/house.xml" />
+        <mapper resource="mapper/comment.xml"/>
+        <mapper resource="mapper/agency.xml" />
+    </mappers>
+
+</configuration>
